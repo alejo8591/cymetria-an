@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+</head>
+<body ng-app="Events">
+
+	<div ng-controller="ControllerOne">
+		<button ng-click="simple_click()">
+			Click
+		</button>
+
+		<button ng-dblclick="double_click()">
+			Double Click
+		</button>
+
+		<img src="http://dummyimage.com/600x400/000/fff" alt="img" ng-mouseleave="outMouseImg()" ng-mouseenter="onMouseImg()">
+
+		{{ event_click }}
+	</div>
+
+	<script>
+
+		angular.module('Events', [])
+		       .controller('ControllerOne', function($scope){
+		       		$scope.simple_click = function(){
+		       			$scope.event_click = "Simple Click";
+		       		};
+
+		       		$scope.double_click = function(){
+		       			$scope.event_click = "Doble CLick";
+		       		};
+
+		       		$scope.outMouseImg = function(){
+		       			$scope.event_click = "Cursor out Image";
+		       		};
+
+		       		$scope.onMouseImg = function(){
+		       			$scope.event_click = "Cursor on Image";
+		       		}
+
+		       });
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+</head>
+<body ng-app>
+	<h1>Products</h1>
+	<ul>
+		<li>Smartphone {{ 50000 | currency }}</li>
+		<li>Tablel {{ 20000 | currency: "$" }} </li>
+		<li>Laptop {{ 300000 * 0.16 + 2000 }}</li>
+		<li>Made in {{ 'MaDe IN cHiNa' | uppercase }} </li>
+	</ul>
+</body>
+</html>
