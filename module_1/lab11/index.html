@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="lab11.js"></script>
+</head>
+<body ng-app="AngularJS_AJAX">
+	<h1>Ajax</h1>
+
+	<div ng-controller="studentController">
+		<table>
+			<tr>
+				<th>Nombre</th>
+				<th>Roll No.</th>
+				<th>Porcentaje</th>
+			</tr>
+			<tr ng-repeat="student in students">
+				<td>{{ student.Name }}</td>
+				<td>{{ student.RollNo }}</td>
+				<td>{{ student.Percentage }}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

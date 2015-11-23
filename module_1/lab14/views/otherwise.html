@@ -1,0 +1,35 @@
+<form>
+	<label for="name">Nombre</label>
+	<input type="text" name="name" ng-model="new_contact.name"><br />
+
+	<label for="email">Email</label>
+	<input type="email" name="email" ng-model="new_contact.email"><br />
+
+	<label for="mobile">Télefono</label>
+	<input type="text" name="mobile" ng-model="new_contact.mobile"><br />
+	<br />
+	<input type="hidden" name="id" ng-model="new_contact.id">
+	<input type="button" ng-click="saveContactPerson()" value="Guardar Información">
+</form>
+
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Email</th>
+			<th>Télefono</th>
+			<th>Opciones</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="person in people">
+			<td>{{ person.name }}</td>
+			<td>{{ person.email }}</td>
+			<td>{{ person.mobile }}</td>
+			<td>
+				<a href="" ng-click="edit(person.id)">Editar</a> |
+				<a href="" ng-click="delete(person.id)">Eliminar</a> |
+			</td>
+		</tr>
+	</tbody>
+</table>

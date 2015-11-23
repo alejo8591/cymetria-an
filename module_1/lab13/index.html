@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lab13</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+</head>
+<body>
+	<div ng-app="lab13">
+		<nav>
+			<ul>
+				<li><a href="#/operation/sum">Suma</a></li>
+				<li><a href="#/operation/res">Resta</a></li>
+				<li><a href="#/operation/mul">Multiplicación</a></li>
+				<li><a href="#/operation/div">División</a></li>
+			</ul>
+		</nav>
+
+		<div ng-view></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="changeClass">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+</head>
+<body>
+	<div ng-controller="changeClassController">
+		<div class="container">
+			<p ng-style="style_class">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae autem, ipsum facere delectus expedita voluptatum corporis error similique accusamus, repellat nisi architecto explicabo unde quasi, exercitationem possimus minima aut doloribus.
+			</p>
+
+			<h2 ng-class="special_class">Cambiar Clase</h2>
+		</div>
+
+		<button ng-click="changeProperties()">Cambiar Propiedades</button>
+		
+		<button ng-click="changeClassProperties()">Cambiar Clases</button>
+
+		<button ng-click="resetCLassProperties()">Eliminar Estilos</button>
+	</div>
+
+	<script>
+		angular.module('changeClass', [])
+			   .controller('changeClassController', ['$scope', function($scope){
+
+			   		$scope.changeProperties = function(){
+			   			$scope.style_class = {
+			   				"background": "blue",
+			   				"color": "yellow"
+			   			}
+			   		};
+
+			   		$scope.changeClassProperties = function(){
+			   			$scope.special_class = 'angularjs';
+			   		};
+
+			   		$scope.resetClassProperties = function(){
+
+			   			$scope.special_class = '';
+			   			$scope.style_class = '';
+			   		};
+			   }]);
+	</script>
+</body>
+</html>
