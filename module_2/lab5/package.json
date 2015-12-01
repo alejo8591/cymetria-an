@@ -1,0 +1,12 @@
+{
+  "name": "lab5",
+  "version": "0.0.1",
+  "dependencies": {
+    "consolidate": "^0.13.1",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "morgan": "^1.6.1",
+    "swig": "^1.4.2"
+  }
+}
